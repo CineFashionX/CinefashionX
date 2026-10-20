@@ -1,11 +1,4 @@
 html {
-  /* Styling for the Profile Avatar */
-.profile-avatar {
-    display: block;
-    margin: 20px auto;       /* Centers the image horizontally */
-    width: 180px;            /* Controls the width of the avatar */
-    height: auto;            /* Keeps the original image proportions */
-    border-radius: 50%;      /* Optional: Crops the square image into a perfect circle */
 }
   height: 100%;
   background: 50% 50% no-repeat
