@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pen</title>
+  </head>
+  <body>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nazarian Lopez — Cinema &amp; Fashion | New York City</title>
+<meta name="description" content="Nazarian Lopez, also known as CineFashionX: fashion model, actor and cinematographer based in New York City. Acting, modeling, runway, community events and collabs.">
+<link rel="icon" href="https://images.wish4.ai/assets/2018/8006f1dd495503ade6c58ce3.jpg">
+<meta property="og:image" content="https://images.wish4.ai/assets/2018/b30a5eac12015cdb53934b8e.jpeg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&family=Noto+Color+Emoji&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0f0d0b;
+    --ink-2:#1a1714;
+    --ink-3:#25211c;
+    --cream:#f2ead9;
+    --muted:#a99f8c;
+    --gold:#d9ab4f;
+    --gold-soft:rgba(217,171,79,.14);
+    --clay:#c75a3a;
+    --line:rgba(242,234,217,.12);
+    --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ink);color:var(--cream);font-family:"DM Sans","Noto Color Emoji",sans-serif;line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;height:auto;display:block}
+  a{color:inherit}
+  ::selection{background:var(--gold);color:var(--ink)}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+  .wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+  .serif{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+  .eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--gold)}
+  h1,h2,h3,.fact b{font-family:"Bricolage Grotesque","Noto Color Emoji",sans-serif;line-height:1.02;letter-spacing:-.02em}
+  h2{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:800;margin:14px 0 18px}
+  section{padding:clamp(80px,12vw,140px) 0;position:relative}
+
+  /* grain */
+  body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:100;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+  /* header */
+  header{position:fixed;top:0;left:0;right:0;z-index:50;transition:background .3s,border-color .3s;border-bottom:1px solid transparent}
+  header.scrolled{background:rgba(15,13,11,.82);backdrop-filter:blur(14px);border-color:var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:74px}
+  .logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:"Bricolage Grotesque";font-weight:800;font-size:1.15rem}
+  .logo-mark{width:40px;height:40px;border-radius:50%;overflow:hidden;flex-shrink:0;background:#262a2d;border:1px solid rgba(217,171,79,.55)}
+  .logo-mark img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;transform:scale(1.6)}
+  .nav-links{display:flex;gap:6px;list-style:none;align-items:center}
+  .nav-links a{text-decoration:none;font-size:.93rem;padding:10px 14px;border-radius:999px;color:var(--muted);transition:color .2s,background .2s}
+  .nav-links a:hover{color:var(--cream);background:var(--ink-3)}
+  .nav-links .cta{background:var(--cream);color:var(--ink);font-weight:700}
+  .nav-links .cta:hover{background:var(--gold);color:var(--ink)}
+  .burger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:50%;background:transparent;cursor:pointer;position:relative}
+  .burger span{position:absolute;left:13px;right:13px;height:2px;background:var(--cream);transition:transform .3s,opacity .3s}
+  .burger span:nth-child(1){top:16px}.burger span:nth-child(2){top:22px}.burger span:nth-child(3){top:28px}
+  .burger[aria-expanded="true"] span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  .burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  /* hero */
+  .hero{min-height:100svh;display:flex;align-items:center;padding:120px 0 90px;overflow:hidden}
+  .hero::before{content:"";position:absolute;width:70vmax;height:70vmax;right:-25vmax;top:-20vmax;border-radius:50%;
+    background:radial-gradient(circle,rgba(217,171,79,.22),rgba(199,90,58,.08) 45%,transparent 70%);filter:blur(10px);animation:float 14s ease-in-out infinite}
+  @keyframes float{50%{transform:translate(-4vmax,4vmax) scale(1.05)}}
+  .hero-inner{position:relative;display:grid;grid-template-columns:1.4fr .9fr;gap:60px;align-items:center}
+  .hero h1{font-size:clamp(3.4rem,11vw,9.5rem);font-weight:800;margin:22px 0 8px;line-height:.9}
+  .hero h1 .serif{display:block;color:var(--gold);font-size:.82em;letter-spacing:-.01em;line-height:1}
+  .hero p.lead{font-size:clamp(1.05rem,2vw,1.3rem);color:var(--muted);max-width:560px;margin:24px 0 22px}
+  .hero p.lead strong{color:var(--cream);font-weight:500}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 34px;list-style:none;max-width:600px}
+  .chips li{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(26,23,20,.6);padding:8px 14px;border-radius:999px;font-size:.9rem;color:var(--cream);transition:border-color .25s,transform .25s}
+  .chips li:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .btns{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;min-height:52px;padding:0 26px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .25s,background .25s,color .25s,border-color .25s;border:1px solid transparent;cursor:pointer;font-size:1rem;font-family:inherit}
+  .btn-gold{background:var(--gold);color:var(--ink)}
+  .btn-gold:hover{transform:translateY(-3px);background:var(--cream)}
+  .btn-ghost{border-color:var(--line);color:var(--cream);background:transparent}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .btn .arr{transition:transform .25s}.btn:hover .arr{transform:translateX(4px)}
+
+  .crest{position:relative;aspect-ratio:3/4;border-radius:220px 220px var(--radius) var(--radius);overflow:hidden;
+    background:linear-gradient(160deg,#2c241b 0%,#16120e 60%),var(--ink-2);border:1px solid var(--line);display:grid;place-items:center}
+  .crest::before{content:"";position:absolute;inset:14px;border-radius:210px 210px 10px 10px;border:1px solid rgba(217,171,79,.35)}
+  .crest-mono{font-family:"Instrument Serif";font-style:italic;font-size:clamp(7rem,16vw,12rem);color:var(--gold);line-height:1;position:relative}
+  .crest svg{position:absolute;top:16%;left:50%;transform:translateX(-50%);width:34%;color:var(--gold);opacity:.9}
+  .crest-tag{position:absolute;bottom:28px;left:0;right:0;text-align:center;font-size:.72rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted)}
+  .badge{position:absolute;left:-28px;bottom:70px;background:var(--cream);color:var(--ink);padding:14px 18px;border-radius:14px;font-weight:700;font-size:.88rem;box-shadow:0 18px 40px rgba(0,0,0,.4);display:flex;align-items:center;gap:10px;animation:bob 5s ease-in-out infinite}
+  .badge i{width:10px;height:10px;border-radius:50%;background:#3fae6a;box-shadow:0 0 0 4px rgba(63,174,106,.25)}
+  .loc{position:absolute;right:-18px;top:60px;background:var(--ink-3);border:1px solid rgba(217,171,79,.4);color:var(--cream);padding:10px 16px;border-radius:999px;font-weight:700;font-size:.82rem;box-shadow:0 18px 40px rgba(0,0,0,.4);animation:bob 6s ease-in-out infinite reverse}
+  @keyframes bob{50%{transform:translateY(-8px)}}
+  .scroll-cue{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);font-size:.72rem;letter-spacing:.3em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:10px}
+  .scroll-cue::after{content:"";width:1px;height:40px;background:linear-gradient(var(--gold),transparent);animation:cue 2s infinite}
+  @keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+  /* marquee */
+  .marquee{border-block:1px solid var(--line);background:var(--ink-2);overflow:hidden;padding:22px 0}
+  .marquee-track{display:flex;gap:48px;width:max-content;animation:scroll 32s linear infinite}
+  .marquee span{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(1.4rem,3vw,2.2rem);white-space:nowrap;display:flex;align-items:center;gap:48px}
+  .marquee span::after{content:"✦";color:var(--gold);font-size:.7em}
+  .marquee span:nth-child(even){font-family:"Instrument Serif";font-style:italic;font-weight:400;color:var(--muted)}
+  @keyframes scroll{to{transform:translateX(-50%)}}
+
+  /* about */
+  .about-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(40px,7vw,100px);align-items:start}
+  .about-big{font-family:"Bricolage Grotesque";font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.2;font-weight:600;letter-spacing:-.015em}
+  .about-big .serif{color:var(--gold)}
+  .about-text p{color:var(--muted);margin-bottom:18px;font-size:1.06rem}
+  .about-text p strong{color:var(--cream);font-weight:500}
+  .facts{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;margin-top:34px}
+  .fact{background:var(--ink);padding:22px}
+  .fact small{display:block;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+  .fact b{font-family:"Bricolage Grotesque";font-size:1.15rem;font-weight:600}
+  .fact a{text-decoration:none;word-break:break-all}
+  .fact a:hover{color:var(--gold)}
+
+  /* services */
+  .what{background:var(--ink-2)}
+  .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;flex-wrap:wrap;margin-bottom:56px}
+  .section-head p{color:var(--muted);max-width:400px}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  .card{background:var(--ink);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px 34px;position:relative;overflow:hidden;transition:transform .35s,border-color .35s}
+  .card::before{content:"";position:absolute;inset:auto -40% -60% -40%;height:70%;background:radial-gradient(ellipse,var(--gold-soft),transparent 70%);opacity:0;transition:opacity .4s}
+  .card:hover{transform:translateY(-8px);border-color:rgba(217,171,79,.5)}
+  .card:hover::before{opacity:1}
+  .card .num{font-family:"Instrument Serif";font-style:italic;color:var(--gold);font-size:1.4rem}
+  .card .ico{width:58px;height:58px;border-radius:14px;background:var(--gold-soft);display:grid;place-items:center;margin:22px 0 26px;font-size:1.7rem;line-height:1}
+  .card h3{font-size:1.5rem;font-weight:700;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.97rem;position:relative}
+  .collab-strip{margin-top:22px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;border:1px solid rgba(217,171,79,.4);border-radius:var(--radius);padding:26px 30px;background:linear-gradient(110deg,rgba(217,171,79,.12),rgba(199,90,58,.06) 60%,transparent)}
+  .collab-strip h3{font-size:clamp(1.3rem,2.6vw,1.8rem);font-weight:800}
+  .collab-strip p{color:var(--muted);margin-top:4px}
+
+  /* journey */
+  .timeline{position:relative;margin-top:60px}
+  .timeline::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(var(--gold),var(--line) 80%,transparent)}
+  .chapter{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:70px;position:relative}
+  .chapter::after{content:"";position:absolute;left:50%;top:10px;width:15px;height:15px;border-radius:50%;background:var(--ink);border:2px solid var(--gold);transform:translateX(-50%)}
+  .chapter .label{text-align:right}
+  .chapter:nth-child(even) .label{order:2;text-align:left}
+  .chapter .label span{font-family:"Instrument Serif";font-style:italic;color:var(--gold);font-size:1.3rem}
+  .chapter .label h3{font-size:clamp(1.7rem,3vw,2.4rem);font-weight:800;margin-top:4px}
+  .chapter .body{color:var(--muted);font-size:1.04rem;max-width:440px}
+  .chapter:nth-child(even) .body{margin-left:auto;text-align:right}
+
+  /* quote */
+  .quote{text-align:center;background:linear-gradient(180deg,var(--ink),#18130e 50%,var(--ink))}
+  .quote blockquote{font-family:"Instrument Serif";font-size:clamp(2rem,5.6vw,4.4rem);line-height:1.1;max-width:960px;margin:0 auto}
+  .quote blockquote em{color:var(--gold)}
+  .quote cite{display:block;margin-top:30px;font-style:normal;letter-spacing:.24em;text-transform:uppercase;font-size:.78rem;color:var(--muted)}
+  .values{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:50px}
+  .values li{list-style:none;border:1px solid var(--line);padding:10px 20px;border-radius:999px;font-size:.92rem;transition:background .25s,color .25s,border-color .25s}
+  .values li:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+
+  /* contact */
+  .contact-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(40px,7vw,90px)}
+  .contact-info p{color:var(--muted);font-size:1.08rem;max-width:420px}
+  .bio-card{margin-top:30px;background:var(--ink-2);border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;max-width:440px}
+  .bio-card strong{display:block;font-family:"Bricolage Grotesque";font-size:1.3rem;font-weight:800;margin-bottom:10px}
+  .bio-card ul{list-style:none;display:grid;gap:6px;color:var(--cream);font-size:1rem}
+  .bio-card a{color:var(--gold);text-decoration:none;font-weight:700;word-break:break-all}
+  .bio-card a:hover{text-decoration:underline}
+  .socials{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+  .socials a{width:50px;height:50px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .25s,color .25s,border-color .25s;text-decoration:none}
+  .socials a:hover{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+  .socials svg{width:20px;height:20px}
+  form{background:var(--ink-2);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,4vw,40px);display:grid;gap:18px;align-self:start}
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  label{display:block;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:8px;font-weight:700}
+  input,select,textarea{width:100%;background:var(--ink);border:1px solid var(--line);border-radius:12px;padding:14px 16px;color:var(--cream);font:inherit;font-size:1rem;transition:border-color .2s,box-shadow .2s;min-height:50px}
+  textarea{min-height:130px;resize:vertical}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23d9ab4f' stroke-width='2'%3E%3Cpath d='M1 1l5 5 5-5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 4px var(--gold-soft)}
+  form .btn{justify-content:center;width:100%}
+
+  footer{border-top:1px solid var(--line);padding:50px 0 40px}
+  .foot-big{font-family:"Bricolage Grotesque";font-weight:800;font-size:clamp(2.4rem,10vw,9rem);line-height:.85;letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1px rgba(242,234,217,.2);text-align:center;margin-bottom:40px;user-select:none;white-space:nowrap}
+  .foot-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:.9rem}
+  .foot-row a{text-decoration:none}.foot-row a:hover{color:var(--gold)}
+
+  /* hero photo */
+  .crest-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 30%;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+  .crest:hover .crest-photo{transform:scale(1.04)}
+  .crest::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(15,13,11,.88));pointer-events:none;z-index:1}
+  .crest::before{z-index:2}
+  .crest-tag{z-index:3;color:var(--cream)}
+
+  /* about photo */
+  .about-photo{position:relative;margin-top:34px;aspect-ratio:4/5;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:var(--ink-2)}
+  .about-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;transform:scale(1.07);transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+  .about-photo:hover img{transform:scale(1.12)}
+  .about-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:50px 22px 18px;background:linear-gradient(transparent,rgba(15,13,11,.92));font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cream);font-weight:700}
+
+  /* gallery */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-bottom:40px}
+  .shot{position:relative;display:block;width:100%;aspect-ratio:3/4;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);cursor:zoom-in;background:var(--ink-2);padding:0;font:inherit;color:var(--cream);text-align:left}
+  .shot img{width:100%;height:100%;object-fit:cover;transform:scale(var(--s,1));transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+  .shot:hover img{transform:scale(calc(var(--s,1) + .06))}
+  .shot::after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 58%,rgba(15,13,11,.88));transition:opacity .4s}
+  .shot span{position:absolute;left:16px;right:16px;bottom:14px;font-size:.74rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;z-index:2}
+  .shot span em{display:block;font-family:"Instrument Serif";font-style:italic;text-transform:none;letter-spacing:0;font-size:1.25rem;font-weight:400;color:var(--gold)}
+  .shot:nth-child(even){margin-top:40px}
+  .shot:hover{border-color:rgba(217,171,79,.55)}
+  .lightbox{border:0;padding:0;background:transparent;max-width:min(92vw,900px);max-height:92svh;margin:auto;overflow:visible}
+  .lightbox::backdrop{background:rgba(8,7,6,.93);backdrop-filter:blur(6px)}
+  .lightbox img{max-height:86svh;width:auto;max-width:100%;border-radius:14px;margin:auto}
+  .lb-close{position:fixed;top:18px;right:18px;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:var(--ink-2);color:var(--cream);font-size:1.5rem;line-height:1;cursor:pointer}
+  .lb-close:hover{background:var(--gold);color:var(--ink)}
+
+  /* brand */
+  .brand{background:var(--ink-2)}
+  .brand-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:18px}
+  .brand-tile{position:relative;border-radius:var(--radius);overflow:hidden;border:1px solid var(--line);background:#23272a;margin:0}
+  .brand-tile.logo-tile{aspect-ratio:4/5}
+  .brand-tile img{width:100%;height:100%;object-fit:cover;transition:transform 1s cubic-bezier(.2,.7,.2,1)}
+  .brand-tile.logo-tile:hover img{transform:scale(1.05)}
+  .brand-tile.word img{transform:scale(1.15)}
+  .brand-tile.word:hover img{transform:scale(1.2)}
+  .brand-tile figcaption{position:absolute;left:20px;top:18px;font-size:.72rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:700;z-index:2}
+
+  /* instagram */
+  .socials a.pill{width:auto;height:50px;display:inline-flex;align-items:center;gap:10px;padding:0 20px 0 15px;border-radius:999px;font-weight:700;font-size:.93rem}
+  .socials a.pill small{font-weight:500;color:var(--muted);font-size:.8rem;transition:color .25s}
+  .socials a.pill:hover small{color:var(--ink)}
+  .ig-row{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:30px}
+  .ig-card{display:flex;align-items:center;gap:18px;padding:22px 24px;border-radius:var(--radius);border:1px solid var(--line);background:var(--ink-2);text-decoration:none;transition:transform .3s,border-color .3s,background .3s;position:relative;overflow:hidden}
+  .ig-card::before{content:"";position:absolute;inset:0;background:linear-gradient(110deg,rgba(217,171,79,.14),rgba(199,90,58,.08) 55%,transparent);opacity:0;transition:opacity .3s}
+  .ig-card:hover{transform:translateY(-4px);border-color:rgba(217,171,79,.55)}
+  .ig-card:hover::before{opacity:1}
+  .ig-card.main{border-color:rgba(217,171,79,.4)}
+  .ig-ico{width:56px;height:56px;flex-shrink:0;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--gold),var(--clay));color:var(--ink);position:relative}
+  .ig-ico svg{width:26px;height:26px}
+  .ig-txt{position:relative;flex:1;min-width:0}
+  .ig-txt small{display:block;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .ig-txt b{display:block;font-family:"Bricolage Grotesque";font-size:clamp(1.2rem,2.4vw,1.5rem);font-weight:800;margin:2px 0}
+  .ig-txt span{color:var(--muted);font-size:.93rem}
+  .ig-go{position:relative;font-size:1.3rem;color:var(--gold);transition:transform .25s}
+  .ig-card:hover .ig-go{transform:translate(3px,-3px)}
+  .collab-btns{display:flex;gap:12px;flex-wrap:wrap}
+  .foot-ig{display:flex;gap:18px;flex-wrap:wrap}
+  @media (max-width:820px){.ig-row{grid-template-columns:1fr}}
+  @media (max-width:560px){
+    .ig-card{padding:18px;gap:14px}
+    .ig-ico{width:48px;height:48px;border-radius:14px}
+    .collab-btns{width:100%}
+    .collab-btns .btn{flex:1;justify-content:center}
+  }
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(36px);transition:opacity .9s cubic-bezier(.2,.7,.2,1),transform .9s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+
+  @media (max-width:1000px){
+    .cards{grid-template-columns:repeat(2,1fr)}
+    .hero-inner{grid-template-columns:1fr}
+    .crest{max-width:340px;width:100%;margin-inline:auto}
+    .badge{left:-10px}
+    .loc{right:-6px}
+    .gallery{grid-template-columns:repeat(2,1fr)}
+  }
+  @media (max-width:820px){
+    .burger{display:block}
+    .nav-links{position:fixed;inset:74px 0 auto 0;flex-direction:column;align-items:stretch;background:rgba(15,13,11,.97);backdrop-filter:blur(14px);padding:20px;gap:4px;border-bottom:1px solid var(--line);transform:translateY(-130%);transition:transform .4s ease;z-index:-1}
+    .nav-links.open{transform:none}
+    .nav-links a{display:block;padding:14px 16px;font-size:1.05rem}
+    .about-grid,.contact-grid{grid-template-columns:1fr}
+    .timeline::before{left:7px}
+    .chapter{grid-template-columns:1fr;gap:10px;padding-left:40px;margin-bottom:50px}
+    .chapter::after{left:7px}
+    .chapter .label,.chapter:nth-child(even) .label{text-align:left;order:0}
+    .chapter:nth-child(even) .body{margin-left:0;text-align:left}
+    .brand-grid{grid-template-columns:1fr}
+    .brand-tile.logo-tile{aspect-ratio:1/1}
+    .brand-tile.word{aspect-ratio:16/9}
+  }
+  @media (max-width:560px){
+    .cards,.row,.facts{grid-template-columns:1fr}
+    .scroll-cue{display:none}
+    .btns .btn{flex:1;justify-content:center;padding:0 18px;white-space:nowrap}
+    .chips li{font-size:.84rem;padding:7px 12px}
+    .collab-strip .btn{width:100%;justify-content:center}
+    .gallery{gap:10px}
+    .shot:nth-child(even){margin-top:26px}
+    .shot span{left:12px;right:12px;bottom:10px;font-size:.66rem}
+    .shot span em{font-size:1.05rem}
+  }
+  @media (prefers-reduced-motion:reduce){
+    *,*::before,*::after{animation:none!important;transition:none!important}
+    .reveal{opacity:1;transform:none}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <nav class="wrap nav" aria-label="Main">
+    <a href="/" class="logo"><span class="logo-mark"><img src="https://images.wish4.ai/assets/2018/8006f1dd495503ade6c58ce3.jpg" alt="" width="40" height="40"></span>CinefashionX</a>
+    <button class="burger" aria-label="Open menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="menu">
+      <li><a href="#about">About</a></li>
+      <li><a href="#what">What I Do</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#journey">Journey</a></li>
+      <li><a href="#contact" class="cta">Collab With Me</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="eyebrow reveal">🎬 Cinema &amp; Fashion</span>
+        <h1 class="reveal d1">Nazarian <span class="serif">Lopez.</span></h1>
+        <p class="lead reveal d2">(Nazarian Davoni Lopez) Fashion model, actor and cinematographer based in <strong>The Bronx, NY</strong>, also known as <strong>CineFashionX</strong> aged <strong>14</strong>. In front of the lens, on the runway or behind the camera, I'm here to change the world.</p>
+        <ul class="chips reveal d2" aria-label="Highlights">
+          <li> 5'11</li>
+          <li>149 LBS</li>
+          <li>Shoes: 13</li>
+          <li>Waist: 32</li>
+          <li>🤝 Community Events</li>
+          <li>💼 DM Collabs</li>
+        </ul>
+        <div class="btns reveal d3">
+          <a href="#contact" class="btn btn-gold">Book a collab <span class="arr">→</span></a>
+          <a href="mailto:ntl1vee@gmail.com" class="btn btn-ghost">Email me</a>
+        </div>
+      </div>
+      <div class="reveal d2" style="position:relative">
+        <div class="crest">
+          <img class="crest-photo" src="https://images.wish4.ai/assets/2018/b30a5eac12015cdb53934b8e.jpeg" alt="Nazarian Lopez in profile wearing sunglasses outside a New York City doorway" fetchpriority="high">
+          <span class="crest-tag">Nazarian Lopez · CineFashionX</span>
+        </div>
+        <div class="loc">🌆 the Bronx, NY</div>
+        <div class="badge"><i></i> Open for collabs</div>
+      </div>
+    </div>
+    <div class="scroll-cue">Scroll</div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Fashion Model</span><span>Actor</span><span>Cinematographer</span><span>also known as CineFashionX</span><span>Welcome to my website!</span>
+      <span>Fashion Model</span><span>Actor</span><span>Cinematographer</span><span>also known as CineFashionX</span><span>Welcome to my website!</span>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap about-grid">
+      <div class="reveal">
+        <span class="eyebrow">About me</span>
+        <h2>Cinema meets <span class="serif" style="color:var(--gold)">fashion.</span></h2>
+        <p class="about-big">Every look tells a story, and every frame is a <span class="serif">chance to shine.</span></p>
+        <figure class="about-photo">
+          <img src="https://images.wish4.ai/assets/2018/2e4e8f5e52d49b6294414918.png" alt="Nazarian Lopez in a camel overcoat, quarter-zip and tan boots" loading="lazy">
+          <figcaption>Camel on camel · NYC</figcaption>
+        </figure>
+      </div>
+      <div class="about-text reveal d1">
+        <p>I'm <strong>Nazarian Lopez</strong>, a fashion model, actor and cinematographer working out of <strong>New York City</strong>. I was born in <strong>June 22nd 2012</strong>, and I collaborated with <strong>Trust for Public Land</strong>, my previous school <strong>M.S. 343</strong>, and <strong>Kidz Spotlight Magazine</strong>.</p>
+        <p><strong>CineFashionX</strong> is the name I create under. It covers everything I do: <strong>acting</strong> on set, <strong>modeling</strong> for shoots and campaigns, walking the <strong>runway</strong>, and <strong>filming</strong> short films and clips from behind the camera.</p>
+        <p>I'm also proud to show up for the city at <strong>community events</strong>. If you've got a project, a brand or an idea, DM me or send an email. I'm always open to collabs.</p>
+        <div class="facts">
+          <div class="fact"><small>Known as</small><b>CineFashionX</b></div>
+          <div class="fact"><small>Based in</small><b>🌆 New York City</b></div>
+          <div class="fact"><small>Focus</small><b>🎬 Cinema &amp; Fashion</b></div>
+          <div class="fact"><small>Email</small><b><a href="mailto:ntl1vee@gmail.com">ntl1vee@gmail.com</a></b></div>
+          <div class="fact"><small>Instagram · Main</small><b><a href="https://www.instagram.com/cinefashionx/" target="_blank" rel="noopener">@cinefashionx</a></b></div>
+          <div class="fact"><small>Instagram · Behind the scenes</small><b><a href="https://www.instagram.com/morecfx/" target="_blank" rel="noopener">@morecfx</a></b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="what" class="what">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="reveal">
+          <span class="eyebrow">What I do</span>
+          <h2>On set, on stage, <span class="serif" style="color:var(--gold)">in the city.</span></h2>
+        </div>
+        <p class="reveal d1">Acting, modeling, runway and community: four stages I show up for, all under CineFashionX.</p>
+      </div>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="num">01</span>
+          <div class="ico" aria-hidden="true">📸</div>
+          <h3>Acting</h3>
+          <p>Bringing characters to life on camera, from short films and music videos to commercials and indie productions.</p>
+        </article>
+        <article class="card reveal d1">
+          <span class="num">02</span>
+          <div class="ico" aria-hidden="true">👗</div>
+          <h3>Modeling</h3>
+          <p>Editorial, lookbook and brand shoots: striking poses and looks that make the clothes and the story come alive.</p>
+        </article>
+        <article class="card reveal d2">
+          <span class="num">03</span>
+          <div class="ico" aria-hidden="true">💃</div>
+          <h3>Runway</h3>
+          <p>Confident, polished walks for fashion shows and designer showcases across New York City.</p>
+        </article>
+        <article class="card reveal d3">
+          <span class="num">04</span>
+          <div class="ico" aria-hidden="true">🤝</div>
+          <h3>Community Events</h3>
+          <p>Showing up for NYC: hosting, appearing at and supporting events that bring people together.</p>
+        </article>
+      </div>
+      <div class="collab-strip reveal">
+        <div>
+          <h3>💼 DM for collabs</h3>
+          <p>Brands, photographers, designers and filmmakers: let's create something together.</p>
+        </div>
+        <div class="collab-btns">
+          <a href="https://www.instagram.com/cinefashionx/" target="_blank" rel="noopener" class="btn btn-ghost">DM @cinefashionx</a>
+          <a href="#contact" class="btn btn-gold">Start a collab <span class="arr">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="reveal">
+          <span class="eyebrow">Gallery</span>
+          <h2>Looks from <span class="serif" style="color:var(--gold)">the city.</span></h2>
+        </div>
+        <p class="reveal d1">Fits, frames and moments from around New York City. Tap any photo to see it full size.</p>
+      </div>
+      <div class="gallery">
+        <button type="button" class="shot reveal" aria-label="View photo: After dark, Goyard">
+          <img src="https://images.wish4.ai/assets/2018/656c7ce42e2b13cff8a530b6.jpg" alt="Black sneakers and a Goyard bag on a stone ledge at night" loading="lazy">
+          <span><em>After dark</em>Goyard · Paris</span>
+        </button>
+        <button type="button" class="shot reveal d1" aria-label="View photo: Shades on">
+          <img src="https://images.wish4.ai/assets/2018/b30a5eac12015cdb53934b8e.jpeg" alt="Nazarian Lopez in profile wearing sunglasses and a black graphic tee" loading="lazy">
+          <span><em>Shades on</em>Street style</span>
+        </button>
+        <button type="button" class="shot reveal d2" style="--s:1.07" aria-label="View photo: Camel on camel">
+          <img src="https://images.wish4.ai/assets/2018/2e4e8f5e52d49b6294414918.png" alt="Nazarian Lopez in a camel overcoat and tan boots" loading="lazy">
+          <span><em>Camel on camel</em>Holiday fit</span>
+        </button>
+        <button type="button" class="shot reveal d3" style="--s:1.15" aria-label="View photo: Close-up">
+          <img src="https://images.wish4.ai/assets/2018/3184f526b80660099262fce1.png" alt="Close-up of Nazarian Lopez in clear glasses and a leather jacket" loading="lazy">
+          <span><em>Close-up</em>Leather &amp; lenses</span>
+        </button>
+      </div>
+      <div class="ig-row">
+        <a class="ig-card main reveal" href="https://www.instagram.com/cinefashionx/" target="_blank" rel="noopener" aria-label="Follow @cinefashionx on Instagram, the main account">
+          <span class="ig-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+          <span class="ig-txt"><small>Main account</small><b>@cinefashionx</b><span>Looks, shoots, acting and runway</span></span>
+          <span class="ig-go" aria-hidden="true">↗</span>
+        </a>
+        <a class="ig-card reveal d1" href="https://www.instagram.com/morecfx/" target="_blank" rel="noopener" aria-label="Follow @morecfx on Instagram for behind the scenes and extras">
+          <span class="ig-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></span>
+          <span class="ig-txt"><small>Behind the scenes</small><b>@morecfx</b><span>BTS, extras and unseen moments</span></span>
+          <span class="ig-go" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo viewer">
+    <button type="button" class="lb-close" aria-label="Close photo">×</button>
+    <img src="" alt="">
+  </dialog>
+
+  <section id="brand" class="brand">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="reveal">
+          <span class="eyebrow">The brand</span>
+          <h2>This is <span class="serif" style="color:var(--gold)">CineFashionX.</span></h2>
+        </div>
+        <p class="reveal d1">Cinema and fashion under one name: the profile mark and the wordmark behind everything Nazarian creates.</p>
+      </div>
+      <div class="brand-grid">
+        <figure class="brand-tile logo-tile reveal">
+          <figcaption>The mark</figcaption>
+          <img src="https://images.wish4.ai/assets/2018/8006f1dd495503ade6c58ce3.jpg" alt="CineFashionX logo: white profile silhouette with an afro and glasses" loading="lazy">
+        </figure>
+        <figure class="brand-tile word reveal d1">
+          <figcaption>The wordmark</figcaption>
+          <img src="https://images.wish4.ai/assets/2018/84d57251256b891684a3ec6c.jpg" alt="CINEFASHION wordmark in silver letters on a dark wall" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="journey">
+    <div class="wrap">
+      <div style="text-align:center" class="reveal">
+        <span class="eyebrow">The journey</span>
+        <h2>Every frame has <span class="serif" style="color:var(--gold)">a story.</span></h2>
+      </div>
+      <div class="timeline">
+        <div class="chapter reveal">
+          <div class="label"><span>Chapter I</span><h3>The Spark</h3></div>
+          <p class="body">It started with inspiration to create and love for movies and fashion: studying scenes, styling looks and dreaming of being part of the picture.</p>
+        </div>
+        <div class="chapter reveal">
+          <div class="label"><span>Chapter II</span><h3>The City</h3></div>
+          <p class="body">Residing in the Bronx, NYC, Nazarian Lopez became the stage. Castings, shoots, shows and late nights taught the craft and the hustle.</p>
+        </div>
+        <div class="chapter reveal">
+          <div class="label"><span>Chapter III</span><h3>CineFashionX</h3></div>
+          <p class="body">Acting, modeling, runway and cinematography came together under one name, both in front of and behind the lens.</p>
+        </div>
+        <div class="chapter reveal">
+          <div class="label"><span>Chapter IV</span><h3>What's Next</h3></div>
+          <p class="body">A opportunity to change the industry forever, and more collabs with creatives who want to make something unforgettable, the same way Nazarian Lopez did for Trust for Public Land.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap reveal">
+      <blockquote>“You can start something out of thin air and make it the decades big change. <em>Welcome to the new era.</em>”</blockquote>
+      <cite>— Nazarian Lopez · CineFashionX</cite>
+      <ul class="values">
+        <li>🎬 Cinema</li><li>👗 Fashion</li><li>📸 Acting</li><li>💃 Runway</li><li>🤝 Community</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info reveal">
+        <span class="eyebrow">Let's connect</span>
+        <h2>Let's create <span class="serif" style="color:var(--gold)">together.</span></h2>
+        <p>Castings, shoots, runway shows, community events or brand collabs: send a message here, DM me, or email me directly.</p>
+        <div class="bio-card">
+          <strong>Nazarian Lopez</strong>
+          <ul>
+            <li>🎬 Cinema &amp; Fashion</li>
+            <li>🌆 New York City 🌆</li>
+            <li>📸 Acting • 👗 Modeling • 💃 Runway</li>
+            <li>🤝 Community Events • 💼 DM Collabs</li>
+            <li>Email: <a href="mailto:ntl1vee@gmail.com">ntl1vee@gmail.com</a></li>
+            <li>Instagram: <a href="https://www.instagram.com/cinefashionx/" target="_blank" rel="noopener">@cinefashionx</a></li>
+            <li>BTS &amp; extras: <a href="https://www.instagram.com/morecfx/" target="_blank" rel="noopener">@morecfx</a></li>
+          </ul>
+        </div>
+        <div class="socials">
+          <a href="mailto:ntl1vee@gmail.com" aria-label="Email Nazarian"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></a>
+          <a class="pill" href="https://www.instagram.com/cinefashionx/" target="_blank" rel="noopener" aria-label="Instagram @cinefashionx, main account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@cinefashionx <small>Main</small></a>
+          <a class="pill" href="https://www.instagram.com/morecfx/" target="_blank" rel="noopener" aria-label="Instagram @morecfx, behind the scenes and extras"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>@morecfx <small>BTS</small></a>
+        </div>
+      </div>
+      <form class="reveal d1">
+        <div class="row">
+          <div><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your Name (Company, Brand, Sponsor, etc.)" required></div>
+          <div><label for="email">Email</label><input id="email" name="email" type="email" placeholder="name@example.com" required></div>
+        </div>
+        <div>
+          <label for="topic">What's it about?</label>
+          <select id="topic" name="topic">
+            <option>Brand Collab</option>
+            <option>Acting / Casting</option>
+            <option>Modeling / Photoshoot</option>
+            <option>Runway / Fashion Show</option>
+            <option>Community Event</option>
+            <option>Cinematography project</option>
+            <option>Media / Press</option>
+            <option>Podcast Collab</option>
+            <option>Summit Speakings</option>
+            <option>Movie / Show / Film</option>
+            <option>Music Video</option>
+          </select>
+        </div>
+        <div><label for="message">Message</label><textarea id="message" name="message" placeholder="Tell me about your project, dates and location, etc…" required></textarea></div>
+        <button type="submit" class="btn btn-gold">Send message <span class="arr">→</span></button>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-big" aria-hidden="true">CINEFASHIONX</div>
+    <div class="foot-row">
+      <span>© <span id="yr"></span> Nazarian Lopez · New York City</span>
+      <span class="foot-ig"><a href="https://www.instagram.com/cinefashionx/" target="_blank" rel="noopener">IG @cinefashionx</a><a href="https://www.instagram.com/morecfx/" target="_blank" rel="noopener">IG @morecfx</a><a href="mailto:ntl1vee@gmail.com">ntl1vee@gmail.com</a></span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const header=document.querySelector('header');
+  const onScroll=()=>header.classList.toggle('scrolled',scrollY>20);
+  addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+  const burger=document.querySelector('.burger'),menu=document.getElementById('menu');
+  burger.addEventListener('click',()=>{
+    const open=burger.getAttribute('aria-expanded')==='true';
+    burger.setAttribute('aria-expanded',String(!open));
+    burger.setAttribute('aria-label',open?'Open menu':'Close menu');
+    menu.classList.toggle('open',!open);
+  });
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    burger.setAttribute('aria-expanded','false');menu.classList.remove('open');
+  }));
+
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  const lb=document.getElementById('lightbox'),lbImg=lb.querySelector('img');
+  document.querySelectorAll('.shot').forEach(b=>b.addEventListener('click',()=>{
+    const i=b.querySelector('img');lbImg.src=i.currentSrc||i.src;lbImg.alt=i.alt;
+    if(lb.showModal)lb.showModal();else lb.setAttribute('open','');
+  }));
+  lb.addEventListener('click',e=>{if(e.target===lb||e.target.closest('.lb-close'))lb.close()});
+</script>
+</body>
+</html>
